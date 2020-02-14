@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Healthcare</string>
+    <string name="openNavDrawer">Navigation Drawer Open</string>
+    <string name="closeNavDrawer">Navigation Drawer Close</string>
+    <string name="text1">Team Members
+    1. Akshay Mall
+    2. Manasi Agarwal
+    3. Aryan Mittal
+    4. Ayush Mishra</string>
+    <string name="chooser">Send Message......</string>
+</resources>
