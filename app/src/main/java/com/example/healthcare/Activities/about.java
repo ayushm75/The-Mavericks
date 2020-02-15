@@ -1,4 +1,4 @@
-package com.example.healthcare;
+package com.example.healthcare.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import com.example.healthcare.R;
 
 import java.util.ArrayList;
 

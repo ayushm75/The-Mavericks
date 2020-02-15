@@ -1,4 +1,4 @@
-package com.example.healthcare;
+package com.example.healthcare.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,7 +10,12 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.healthcare.R;
+import com.example.healthcare.viewmodels.StepDetector;
+import com.example.healthcare.viewmodels.StepListener;
 
 public class Stepcount extends AppCompatActivity implements SensorEventListener, StepListener {
     private TextView textView;
@@ -18,6 +23,7 @@ public class Stepcount extends AppCompatActivity implements SensorEventListener,
     private SensorManager sensorManager;
     private Sensor accel;
     private int numSteps;
+    private EditText cal;
     private TextView TvSteps;
     private Toolbar toolbar;
     private Button BtnStart;
@@ -36,10 +42,10 @@ public class Stepcount extends AppCompatActivity implements SensorEventListener,
         simpleStepDetector = new StepDetector();
         simpleStepDetector.registerListener(this);
 
-        TvSteps = (TextView) findViewById(R.id.tv_steps);
-        BtnStart = (Button) findViewById(R.id.btn_start);
-        BtnStop = (Button) findViewById(R.id.btn_stop);
-
+        TvSteps = findViewById(R.id.tv_steps);
+        BtnStart = findViewById(R.id.btn_start);
+        BtnStop = findViewById(R.id.btn_stop);
+        cal = findViewById(R.id.cal);
 
 
         BtnStart.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +66,10 @@ public class Stepcount extends AppCompatActivity implements SensorEventListener,
             public void onClick(View arg0) {
 
                 sensorManager.unregisterListener(Stepcount.this);
+                double val = numSteps*0.03125;
+                cal.setText(val+" ap.");
+                TvSteps.setText("0");
+
 
             }
         });

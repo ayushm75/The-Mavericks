@@ -1,8 +1,8 @@
-package com.example.healthcare;
+package com.example.healthcare.viewmodels;
 
 //package com.example.step_counter;
 
-import com.example.healthcare.Stepcount;
+import com.example.healthcare.Activities.Stepcount;
 
 public class StepDetector {
 

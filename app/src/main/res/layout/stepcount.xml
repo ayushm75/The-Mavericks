@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    tools:context=".Stepcount">
+    tools:context=".Activities.Stepcount">
 
     <TextView
         android:id="@+id/tv_steps"
@@ -81,4 +81,39 @@
         android:theme="?attr/actionBarTheme"
         tools:layout_editor_absoluteX="1dp"
        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="122dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="237dp"
+        android:layout_marginBottom="128dp"
+        android:text="Calories burnt :-"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_stop" />
+
+    <EditText
+        android:id="@+id/cal"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="126dp"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:inputType="textPersonName"
+        android:text="0"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_stop" />
 </androidx.constraintlayout.widget.ConstraintLayout>

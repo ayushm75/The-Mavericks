@@ -1,4 +1,4 @@
-package com.example.healthcare;
+package com.example.healthcare.viewmodels;
 
 public interface StepListener {
 

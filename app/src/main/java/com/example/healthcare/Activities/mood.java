@@ -1,4 +1,4 @@
-package com.example.healthcare;
+package com.example.healthcare.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -20,6 +20,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.healthcare.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -88,15 +90,16 @@ public class mood extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         // get the photo URI from the gallery, find the file path from URI and send the file path to ConfirmPhoto
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK && null != data) {
 
             Uri selectedImage = data.getData();
-            String[] filePathColumn = { MediaStore.Images.Media.DATA };
-            Cursor cursor = getContentResolver().query(selectedImage,filePathColumn, null, null, null);
+            String[] filePathColumn = {MediaStore.Images.Media.DATA};
+            Cursor cursor = getContentResolver().query(selectedImage, filePathColumn, null, null, null);
             cursor.moveToFirst();
             int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
             // a string variable which will store the path to the image in the gallery
-            String picturePath= cursor.getString(columnIndex);
+            String picturePath = cursor.getString(columnIndex);
             cursor.close();
             Bitmap bitmap = BitmapFactory.decodeFile(picturePath);
             imageView.setImageBitmap(bitmap);
@@ -191,11 +194,17 @@ public class mood extends AppCompatActivity {
             JSONArray jsonArray = null;
             try {
                 // convert the string to JSONArray
-                jsonArray = new JSONArray(result);
+                Log.i("No error","line 195");
+                //jsonArray = new JSONArray(result);
+                JSONObject jo = new JSONObject(result);
+                JSONArray jArray = jo.getJSONArray("keyIdentifyer");
+                Log.i("No error","line 195");
                 String emotions = "";
                 // get the scores object from the results
                 for(int i = 0;i<jsonArray.length();i++) {
+                    Log.i("No error","line 199");
                     JSONObject jsonObject = new JSONObject(jsonArray.get(i).toString());
+                    Log.i("No error","line 201");
                     JSONObject scores = jsonObject.getJSONObject("scores");
                     double max = 0;
                     String emotion = "";

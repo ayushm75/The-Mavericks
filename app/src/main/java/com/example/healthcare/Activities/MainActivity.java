@@ -1,4 +1,4 @@
-package com.example.healthcare;
+package com.example.healthcare.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.healthcare.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements  View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
@@ -83,9 +84,17 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
             case R.id.doctor : i = new Intent(this, doctor_home.class); this.startActivity ( i );
                 break;
 
-            case R.id.mood : i2 = new Intent(this, mood.class); this.startActivity ( i2 );
+            case R.id.mood : i2 = new Intent(this, com.example.healthcare.Activities.mood.class); this.startActivity ( i2 );
                 break;
 
+            case R.id.blood : i3 = new Intent(this, Dashboard.class); this.startActivity ( i3 );
+                break;
+
+            case R.id.disease : i3 = new Intent(this, Disease.class); this.startActivity ( i3 );
+                break;
+
+            case R.id.blog : i3 = new Intent(this, Blog.class); this.startActivity ( i3 );
+                break;
         }
     }
 
@@ -100,21 +109,21 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
 
         if (id == R.id.pedo)
         {
-            i=new Intent(MainActivity.this,Stepcount.class);
+            i=new Intent(MainActivity.this, Stepcount.class);
             startActivity(i);
         }
         else if (id == R.id.about)
         {
-            i=new Intent(MainActivity.this,about.class);
+            i=new Intent(MainActivity.this, about.class);
             startActivity(i);
         }
         else if (id == R.id.contact)
         {
-            i=new Intent(MainActivity.this,contact.class);
+            i=new Intent(MainActivity.this, contact.class);
             startActivity(i);
         } else if (id == R.id.feedback)
         {
-            i=new Intent(MainActivity.this,feedback.class);
+            i=new Intent(MainActivity.this, feedback.class);
             startActivity(i);
         }
         return true;

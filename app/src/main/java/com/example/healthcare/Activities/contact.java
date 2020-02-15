@@ -1,4 +1,4 @@
-package com.example.healthcare;
+package com.example.healthcare.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.healthcare.R;
 
 import java.util.ArrayList;
 
@@ -32,7 +34,7 @@ public class contact extends AppCompatActivity {
         phone = findViewById(R.id.phone);
         msg = findViewById(R.id.msg);
         toolbar = findViewById(R.id.toolbar);
-        button = findViewById(R.id.button);
+        button = findViewById(R.id.send);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
