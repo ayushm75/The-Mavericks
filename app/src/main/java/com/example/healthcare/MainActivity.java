@@ -83,6 +83,9 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
             case R.id.doctor : i = new Intent(this, doctor_home.class); this.startActivity ( i );
                 break;
 
+            case R.id.mood : i2 = new Intent(this, mood.class); this.startActivity ( i2 );
+                break;
+
         }
     }
 
