@@ -22,8 +22,8 @@ The app aims to provide a platform for people to monitor their health.
     8. A diseases section to give info about particular disease.
     9. FAQ Section.
     
-![alt tag](<img src="https://github.com/vamk-18/The-Mavericks/blob/master/Screenshot_2020-02-16-08-09-04-925_com.example.healthcare.jpg" width="48">)
+![alt tag](https://github.com/vamk-18/The-Mavericks/blob/master/Screenshot_2020-02-16-08-09-04-925_com.example.healthcare.jpg)
 ![alt tag](https://github.com/vamk-18/The-Mavericks/blob/master/Screenshot_2020-02-16-08-09-11-069_com.example.healthcare.jpg)
 ![alt tag](https://github.com/vamk-18/The-Mavericks/blob/master/Screenshot_2020-02-16-08-09-14-571_com.example.healthcare.jpg)
 ![alt tag](https://github.com/vamk-18/The-Mavericks/blob/master/Screenshot_2020-02-16-08-09-18-947_com.example.healthcare.jpg)
-![alt tag](https://github.com/vamk-18/The-Mavericks/blob/master/Screenshot_2020-02-16-08-09-25-683_com.example.healthcare.jpgg)
+![alt tag](https://github.com/vamk-18/The-Mavericks/blob/master/Screenshot_2020-02-16-08-09-25-683_com.example.healthcare.jpg)
